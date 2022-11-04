@@ -1,4 +1,4 @@
-# octoral_korea
+# Octoral_korea
 
 Renew Octoral korean version
 
