@@ -1,2 +1,2 @@
-# octoralKorea-by-KP-C
+# octoral_Korea
 Renew Octoral korean version
