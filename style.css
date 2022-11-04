@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'FrutigerBold';
+    src: url('skin/fonts/frutiger/bold.eot');
+    src: url('skin/fonts/frutiger/bold.eot?#iefix') format('embedded-opentype'),
+         url('skin/fonts/frutiger/bold.woff') format('woff'),
+         url('skin/fonts/frutiger/bold.ttf') format('truetype'),
+         url('skin/fonts/frutiger/bold.svg#frutiger_07103bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger';
+    src: url('skin/fonts/frutiger/roman.eot');
+    src: url('skin/fonts/frutiger/roman.eot?#iefix') format('embedded-opentype'),
+         url('skin/fonts/frutiger/roman.woff') format('woff'),
+         url('skin/fonts/frutiger/roman.ttf') format('truetype'),
+         url('skin/fonts/frutiger/roman.svg#frutiger_05103regular') format('svg');
+	 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*나눔스퀘어 글씨체 추가*/
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url('skin/fonts/frutiger/NanumSquareR.eot');
+    src: local('☺'),
+         url('skin/fonts/frutiger/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+         url('skin/fonts/frutiger/NanumSquareR.woff') format('woff'),
+         url('skin/fonts/frutiger/NanumSquareR.ttf') format('truetype');
+   }
+
+   @font-face {
+    font-family: 'NanumSquare2';
+    font-weight: 700;
+    src: url('skin/fonts/frutiger/NanumSquareB.eot');
+    src: local('☺'),
+         url('skin/fonts/frutiger/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+         url('skin/fonts/frutiger/NanumSquareB.woff') format('woff'),
+         url('skin/fonts/frutiger/NanumSquareB.ttf') format('truetype');
+   }
+
+   @font-face {
+    font-family: 'NanumSquare3';
+    font-weight: 800;
+    src: url('skin/fonts/frutiger/NanumSquareEB.eot');
+    src: local('☺'),
+         url('skin/fonts/frutiger/NanumSquareEB.eot?#iefix') format('embedded-opentype'),
+         url('skin/fonts/frutiger/NanumSquareEB.woff') format('woff'),
+         url('skin/fonts/frutiger/NanumSquareEB.ttf') format('truetype');
+   }
+
+   @font-face {
+    font-family: 'NanumSquare4';
+    font-weight: 300;
+    src: url('skin/fonts/frutiger/NanumSquareL.eot');
+    src: local('☺'),
+         url('skin/fonts/frutiger/NanumSquareL.eot?#iefix') format('embedded-opentype'),
+         url('skin/fonts/frutiger/NanumSquareL.woff') format('woff'),
+         url('skin/fonts/frutiger/NanumSquareL.ttf') format('truetype');
+   }
