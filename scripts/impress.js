@@ -1,16 +1,4 @@
-/*!
- *
- * Copyright	BlueBear Internet Solutions
- * Description	Impress Fx Animations
- * Date		2013
- * Media	screen
- * File		fx/impress.js
- * Todos	- Improve ImpressScrollEffects with limiting number of items to slide
- *		- HW Accelerated animation on mobile
- *
- */
-
- Array.implement({
+Array.implement({
 
 	pushBack: function() {
 		this.push(this[0]);
