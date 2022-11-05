@@ -1,0 +1,271 @@
+.datasheets {
+	position: relative;
+	overflow: hidden;
+}
+
+.datasheets .path {
+	position: relative;
+	margin-bottom: 1em;
+	opacity: 0.5;
+}
+	.datasheets .path:hover {
+		opacity: 1;
+	}
+	.datasheets .path a {
+		text-decoration: none;
+	}
+	.datasheets .path a:hover {
+		text-decoration: underline;
+	}
+
+.datasheets .search {
+	background: #f3f3f3;
+	padding: 10px;
+	color: #343534;
+}
+	.datasheets .search input[type=text] {
+		border: 0;
+		height: 24px;
+		width: 300px;
+		padding-left: 10px;
+		background: #f9f9f9;
+		border: 1px solid #ccc;
+	}
+		.datasheets .search input[type=text]:hover,
+		.datasheets .search input[type=text]:focus {
+			color: #000;
+			border-color: #aaa;
+			background-color: #fff;
+		}
+	.datasheets .search button {
+		border: 0;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: 13px;
+		font-weight: normal;
+		height: 30px;
+		line-height: normal;
+		margin: 0;
+		outline: none;
+		overflow: visible;
+		padding: 1px 15px;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		color: #666;
+		border: 1px solid #ccc;
+		background: #f9f9f9;
+	}
+		.datasheets .search button:hover,
+		.datasheets .search button:focus {
+			color: #000;
+			border-color: #aaa;
+			background-color: #fff;
+		}
+
+.datasheets .listfilter {
+	position: relative;
+	margin: 20px 0;
+}
+	.datasheets .listfilter-paging {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+		.datasheets .listfilter-paging .button {
+			display: block;
+			margin: 0 0 0 10px;
+			float: left;
+			color: #000;
+			border: 1px solid #aaa;
+			background: #fff;
+			padding: 1px 10px;
+			text-decoration: none;
+		}
+			.datasheets .listfilter-paging .button:hover,
+			.datasheets .listfilter-paging .button:focus {
+				color: #000;
+				border-color: #000;
+				background-color: #fff;
+			}
+			.datasheets .listfilter-paging .button.disabled,
+			.datasheets .listfilter-paging .button.disabled:hover,
+			.datasheets .listfilter-paging .button.disabled:focus {
+				opacity: 0.2;
+				color: #000;
+				background: #ccc;
+				border-color: #333;
+			}
+
+.datasheets .countrylist {
+	position: relative;
+	overflow: hidden;
+}
+	.datasheets .countrylist-item-group {
+		position: relative;
+		float: left;
+		width: 25%;
+	}
+		.datasheets .countrylist-item {
+			position: relative;
+			margin-right: 10px;
+		}
+
+.datasheets .productlist {
+	position: relative;
+	overflow: hidden;
+	margin: 1em 0;
+}
+	.datasheets .productlist-item-group {
+		position: relative;
+		float: left;
+		width: 33.3%;
+	}
+		.datasheets .productlist-item {
+			position: relative;
+			margin: 0 0 1px 10px;
+		}
+			.datasheets .productlist-item-group.first .productlist-item {
+				margin-left: 0;
+			}
+			.datasheets .productlist-item-link {
+				position: relative;
+				display: block;
+				color: #5f5b5b;
+				padding: 10px 100px 10px 10px;
+				background: #dddddd;
+				text-decoration: none;
+			}
+				.datasheets .available .productlist-item-link:hover,
+				.datasheets .available .productlist-item-link:focus {
+					background: #cecece;
+				}
+			.datasheets .productlist-item-download,
+			.datasheets .productlist-item-unavailable {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+				.datasheets .productlist-item-download {
+					color: #000;
+				}
+
+.datasheets .productdocumentlist {
+	position: relative;
+	z-index: 1;
+	width: 460px;
+}
+	.datasheets .productdocumentlist-item {
+		position: relative;
+		margin: 0 0 1px 0;
+	}
+	.datasheets .productdocumentlist-item-unavailable {
+		position: relative;
+		display: block;
+		color: #999;
+		padding: 10px 10px 10px 10px;
+	}
+	.datasheets .productdocumentlist-item-link {
+		position: relative;
+		display: block;
+		color: #5f5b5b;
+		padding: 10px 10px 10px 10px;
+		background: #dddddd;
+		text-decoration: none;
+	}
+		.datasheets .available .productdocumentlist-item-link:hover,
+		.datasheets .available .productdocumentlist-item-link:focus {
+			background: #cecece;
+		}
+.datasheets .productdocumentlist-large {
+	overflow: hidden;
+}
+	.datasheets .productdocumentlist-large .productdocumentlist-item {
+		width: 50%;
+		float: left;
+	}
+	.datasheets .productdocumentlist-large .productdocumentlist-item-link {
+		margin-right: 1px;
+	}
+
+.datasheets .region-annotations {
+	border: 3px solid #999;
+	background: rgba(255, 255, 255, 0.1);
+	max-width: 400px;
+	padding: 20px;
+	float: right;
+}
+	.datasheets .region-annotations table {
+		border-color: #ddd;
+	}
+	.datasheets .region-annotations table td,
+	.datasheets .region-annotations table th {
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+
+.datasheets .regionproductlist {
+	position: relative;
+	max-width: 460px;
+}
+	.datasheets .regionproductlist-item {
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ddd;
+	}
+		.datasheets .regionproductlist-item:last-child {
+			border-bottom: 0;
+		}
+		.datasheets .regionproductlist-item .region-annotations {
+			position: relative;
+			max-height: 300px;
+			overflow: auto;
+			float: none;
+			width: auto;
+			margin-bottom: 10px;
+		}
+		.datasheets .regionproductlist-item-product {
+			position: relative;
+			margin: 0 0 1px 0;
+		}
+			.datasheets .regionproductlist-item-product-link {
+				position: relative;
+				display: block;
+				color: #5f5b5b;
+				padding: 10px 100px 10px 10px;
+				background: #dddddd;
+				text-decoration: none;
+			}
+		.datasheets .regionproductlist-item-large .regionproductlist-item-product {
+			width: 50%;
+			float: left;
+		}
+		.datasheets .regionproductlist-item-large .regionproductlist-item-product-link {
+			margin-right: 1px;
+		}
+
+@media all and (max-width: 579px) {
+	.responsive .datasheets .region-annotations {
+		float: none;
+		max-height: 300px;
+		margin-bottom: 1em;
+		overflow: auto;
+	}
+	.responsive .datasheets .countrylist-item-group,
+	.responsive .datasheets .productlist-item-group,
+	.responsive .datasheets .productdocumentlist-large .productdocumentlist-item,
+	.responsive .datasheets .regionproductlist-item-large .regionproductlist-item-product {
+		float: none;
+		width: auto;
+	}
+	.responsive .datasheets .productlist-item {
+		margin-left: 0;
+	}
+	.responsive .datasheets .countrylist-item,
+	.responsive .datasheets .productdocumentlist-large .productdocumentlist-item-link,
+	.responsive .datasheets .regionproductlist-item-large .regionproductlist-item-product-link {
+		margin-right: 0;
+	}
+}
