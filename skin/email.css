@@ -1,0 +1,14 @@
+
+.input-userdata{
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    height: 15em;
+    resize: none;
+}
+
+input:invalid {
+    border-color: orange;
+  }

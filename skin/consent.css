@@ -1,0 +1,39 @@
+.consent-button-close  {
+	color: #333;
+}
+	.consent-button-close:hover,
+	.consent-button-close:focus {
+		color: #000;
+		background-color: #eee;
+	}
+		.consent-button-close:active {
+			background-color: #ddd;
+		}
+	
+.consent-button-settings {
+	color: #333;
+	border-color: #aaa;
+}
+	.consent-button-settings:hover,
+	.consent-button-settings:focus {
+		color: #000;
+		border-color: #777;
+		background-color: #eee;
+	}
+		.consent-button-settings:active {
+			background-color: #ddd;
+			border-color: #666;
+		}
+	
+.consent-button-accept {
+	border-color: #5e8029;
+	background-color: #5e8029;
+}
+	.consent-button-accept:hover,
+	.consent-button-accept:focus {
+		border-color: #5f8425;
+		background-color: #739e30;
+	}
+		.consent-button-accept:active {
+			background-color: #81b135;
+		}

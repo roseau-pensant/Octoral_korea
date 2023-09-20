@@ -1,0 +1,111 @@
+body {
+    font-family: Nanumsquare;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+p {
+    font-family: Nanumsquare;
+    font-size: 15px;
+}
+
+.calculator_change {
+    margin: 10px auto;
+    display: flex;
+}
+
+.calculator_change1 {
+    flex: 1;
+    border: 1px;
+    text-align: center;
+    background-color:beige;
+    border-radius: 20px;
+    padding: 15px 40px;
+}
+
+.calculator_change2 {
+    flex: 1;
+    border: 1px;
+    text-align: center;
+    background-color:beige;
+    border-radius: 20px;
+    margin-left: 5%;
+    padding: 15px 40px;
+}
+
+.button_club {
+    margin: 10px auto;
+    display: flex;
+}
+
+.button_club2 {
+    margin: 10px auto;
+    display: flex;
+}
+
+.w-btn1 {
+    flex: 1;
+    border: 1px;
+    width: 280px;
+    margin: 5px;
+    padding: 15px 40px;
+    border-radius: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn2 {
+    flex: 1;
+    border: 1px;
+    margin: 5px;
+    padding: 15px 60px;
+    border-radius: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn1:hover {
+    color: #00b0f0;
+    cursor: pointer;
+}
+
+.w-btn1:checked{
+    color: #00b0f0;
+}
+
+.w-btn2:hover {
+    color: #00b0f0;
+    cursor: pointer;
+}
+
+.eee {
+    text-align: left;
+}
+
+.calculator_input {
+    border: 1px;
+    margin-top: 5%;
+    padding: 15px 40px;
+    border-radius: 15px;
+    float: right;
+}
+
+.outer_table {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #444444;
+    margin-top: 2%;
+    font-size: 20px;
+}
+
+.outer_table tr, td {
+    border: 1px solid #444444;
+    padding: 5px;
+    width: 80px;
+}
