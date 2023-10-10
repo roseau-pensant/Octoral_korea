@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
-		<script defer src="calculator_clear1.js"></script>
+		<script defer src="calculator_clear6.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 <body>
@@ -41,14 +41,14 @@
 						</div>
 						<hr>
 						<div class="button_club2">
-							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='c150.html'">C150</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C450</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c150.html'">C150</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C500</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_1.html'">C500 (TA910)</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_2.html'">C500 (AP871)</button></div>
 						</div>
 						<div class="button_club2">
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c600.html'">C600</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='CM267_269.html'">CM267/CM269</button></div>
+							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='CM267_269.html'">CM267/CM269</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='Spralac_SP4499.html'">Spralac_SP4499</button></div>
 						</div>
 						<hr>
@@ -56,34 +56,44 @@
 					
                     <div class="calculator_box">
 						<br>
-						<h1>C150 HS CLEAR COAT_부피비 2:1</h1>
+						<h1>CM267/CM269 MATT CLEAR COAT</h1>
 						<p>
-							> 신너는 취향적인 요소 입니다. 0~5% 범위 이내에서 레벨링과 작업장 환경에 최적화 될 수 있는 방법을 선택하십시오. 
-							<br>스프레이 건 마다 특징이 달라서 HVLP 건 일 경우 신너를 희석하면 레벨링에 도움이 됩니다. <br>
-							> S20 페인트 엑셀레이터는 경화제 비율에 1%가 적정합니다. <br>
-							> 플레쉬 오프는 5분이며 핸들링 타임(부스장 셋팅)은 60도30분 이며 식은 후 조립과 광택작업을 하십시오.  
+							> 플레쉬 오프 15~20분 / 강제건조 전 플레쉬 오프 30분 / 핸들링 타임 60도 40분<br>
+							> 무광 스와치로 광택도를 결정 한 후 정확한 배합비와 플레쉬 오프 및 가열건조를 하지 않으면 색상이 구현되지 않을 가능성이 높습니다.<br>
+							> 거의 모든 무광 크리어는 플레쉬 오프 타임이 길고 도장이 까다롭습니다. TDS를 참고하거나 트레이닝 센터로 문의를 주십시오.
 						</p>
+						<div>
+							<button id="reset" type="reset" onclick="reset()">초기화</button>
+							<select id="MX_select" onchange="changeSelect()">
+								<option value="1">M1</option>
+								<option value="2">M2</option>
+								<option value="3">M3</option>
+								<option value="4">M4</option>
+								<option value="5">M5</option>
+							</select>
+							광택도
 
-                        <button id="reset" type="reset" onclick="reset()">초기화</button>
+						</div>
+						
 
 							<div> 
 								<div class="cal-table">
 									<table class="calculator_table" border="1">
 										<thead class="cal-table-th">
 											<tr>
-												<th scope="col">C150</th>
-												<th scope="col">H55</th>
-												<th scope="col">TA910</th>
-												<th scope="col">S20</th>
-												<th scope="col">배합량 (L)</th>
+												<th scope="col">CM267 Low Gloss</th>
+												<th scope="col">CM269 Semi Gloss</th>
+												<th scope="col">HM260 Hardener</th>
+												<th scope="col">TM261 Thinner</th>
+												<th scope="col">배합량 (L)<br></th>
 											</tr>
 										</thead>
 										<tbody id="cal-table-tb">
 											<tr>
-												<td id="C150" scope="col"></td>
-												<td id="H55" scope="col"></td>
-												<td id="C150_TA910" scope="col"></td>
-												<td id="S20" scope="col"></td>
+												<td id="CM267" scope="col"></td>
+												<td id="CM269" scope="col"></td>
+												<td id="HM260" scope="col"></td>
+												<td id="TM261" scope="col"></td>
 												<td>
 													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
 													<inline style="font-size: 25px;">(CC)</inline>

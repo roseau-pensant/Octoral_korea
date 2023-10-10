@@ -5,10 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>배합비 계산기</title>
 		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
-		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../skin/octoral/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
+		<script defer src="calculator_middle5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 <body>
     <div id="container">
@@ -40,37 +41,43 @@
 						</div>
 						<hr>
 						<div class="button_club">
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">일반 철판 작업</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">플라스틱 교환제품 OR <br>철판 동시 작업시</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머 - 일반적인 교환철판</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">PH-254 논샌딩 프라이머 - 일반적인 플러스틱 범퍼교환</button></div>
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 회색 음영 <br>배합비</button></div>
 						</div>
 						<div class="button_club">
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing4.html'">AW001 인테리어도장 배합비</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing5.html'">PW170 워시프라이머 배합비</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing4.html'">PW170 인테리어도장 배합비</button></div>
+							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing5.html'">PW170 워시프라이머 배합비</button></div>
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing6.html'">PE130 애폭시 프라이머</button></div>
 						</div>
 						<hr>
 					</div>
 					<br>
 						<div class="calculator_box">
-							<form action=" " method="get" id="calculator_1">
-								
-								<table class="outer_table">
-									<tr>
-										<td>PW170 (g)</td>
-										<td>H130 (g)</td>
-										<td>목표배합량 (g)</td>
-									</tr>
-									<tr>
-										<td>550.5</td>
-										<td>420.4</td>
-										<td><input type="text" value="100"></td>
-									</tr>
-								</table>  
 
-								<button class="calculator_input" onclick="">배합비 계산</button>
-
-							</form>
+							<h2>PW170 워시프라이머 배합비</h2>
+							
+							<button id="reset" type="reset" onclick="reset()">초기화</button>
+							
+							<table class="calculator_table" border="1">
+								<thead class="cal-table-th">
+									<tr>
+										<th scope="col">PW170 (g)</th>
+										<th scope="col">H130 (g)</th>
+										<th scope="col">목표 배합량 (g)</th>
+									</tr>
+								</thead>
+								<tbody id="cal-table-tb">
+									<tr>
+										<td id="PW170" scope="col"></td>
+										<td id="H130" scope="col"></td>
+										<td>
+											<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
+											<input id="button_result" type="button" value="계산" onclick="calculator()">
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					
                 </div>

@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
-		<script defer src="calculator_clear1.js"></script>
+		<script defer src="calculator_clear3.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 <body>
@@ -41,9 +41,9 @@
 						</div>
 						<hr>
 						<div class="button_club2">
-							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='c150.html'">C150</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C450</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_1.html'">C500 (TA910)</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c150.html'">C150</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C500</button></div>
+							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='c500_1.html'">C500 (TA910)</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_2.html'">C500 (AP871)</button></div>
 						</div>
 						<div class="button_club2">
@@ -56,14 +56,11 @@
 					
                     <div class="calculator_box">
 						<br>
-						<h1>C150 HS CLEAR COAT_부피비 2:1</h1>
+						<h1>C500 HS420 SUPERB CLEAR COAT_부피비 3:1</h1>
 						<p>
-							> 신너는 취향적인 요소 입니다. 0~5% 범위 이내에서 레벨링과 작업장 환경에 최적화 될 수 있는 방법을 선택하십시오. 
-							<br>스프레이 건 마다 특징이 달라서 HVLP 건 일 경우 신너를 희석하면 레벨링에 도움이 됩니다. <br>
-							> S20 페인트 엑셀레이터는 경화제 비율에 1%가 적정합니다. <br>
-							> 플레쉬 오프는 5분이며 핸들링 타임(부스장 셋팅)은 60도30분 이며 식은 후 조립과 광택작업을 하십시오.  
+							> 핀 홀 방지를 위해 습도가 65% 이상일 경우 H26 지건 경화제를 사용하십시오.<br>
+							> 고형분이 50%나 되는 UHS급 크리어 입니다. 반드시 신너를 5% 첨가 해야 합니다.
 						</p>
-
                         <button id="reset" type="reset" onclick="reset()">초기화</button>
 
 							<div> 
@@ -71,19 +68,17 @@
 									<table class="calculator_table" border="1">
 										<thead class="cal-table-th">
 											<tr>
-												<th scope="col">C150</th>
-												<th scope="col">H55</th>
+												<th scope="col">C500</th>
+												<th scope="col">H25</th>
 												<th scope="col">TA910</th>
-												<th scope="col">S20</th>
-												<th scope="col">배합량 (L)</th>
+												<th scope="col">배합량 (g)<br></th>
 											</tr>
 										</thead>
 										<tbody id="cal-table-tb">
 											<tr>
-												<td id="C150" scope="col"></td>
-												<td id="H55" scope="col"></td>
-												<td id="C150_TA910" scope="col"></td>
-												<td id="S20" scope="col"></td>
+												<td id="C500" scope="col"></td>
+												<td id="H25" scope="col"></td>
+												<td id="C500_1_TA910" scope="col"></td>
 												<td>
 													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
 													<inline style="font-size: 25px;">(CC)</inline>

@@ -5,11 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>배합비 계산기</title>
 		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
-		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../skin/octoral/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
-		<script defer src="calculator_middle.js"></script>
+		<script defer src="calculator_middle1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 <body>
     <div id="container">
@@ -41,8 +41,8 @@
 						</div>
 						<hr>
 						<div class="button_club">
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">일반 철판 작업</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">플라스틱 교환제품 OR <br>철판 동시 작업시</button></div>
+							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머 - 일반적인 교환철판</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">PH-254 논샌딩 프라이머 - 일반적인 플러스틱 범퍼교환</button></div>
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 회색 음영 <br>배합비</button></div>
 						</div>
 						<div class="button_club">
@@ -53,50 +53,58 @@
 						<hr>
 					</div>
 					<br>
+					<div class="calculator_box">
 
-						<div class="calculator_box">
-							<!--<form action=" " method="get" id="calculator_1">-->
-								<p>신너(TA910)가 적으면 건조가 늦고 많으면 건조가 빠르지만 도막 두께를 염두에 둔다면 권장량을 적극 따르십시오.</p>
-								<!--if(this.value) location.href=(this.value);-->
-								<select name="GS_" onchange="changeSelect()">
-									<option value="GS901">GS901 Black</option>
-									<option value="GS903">GS903 White</option>
-									<option value="GS905">GS905 Light grey</option>
-									<option value="GS906">GS906 Grey</option>
-									<option value="GS907">GS907 Mid Grey</option>
-									<option value="GS908">GS908 Dark Grey</option>
+								<h2>PH-254 논샌딩 프라이머 - 일반적인 교환철판</h2>
+								<h3>**e-coat 위에 샌딩 없이 도포하십시오.</h3>
+								<p>
+									> 신너(TA910)가 적으면 건조가 늦고 많으면 건조가 빠르지만 도막 두께를 염두에 둔다면<br>
+									> 권장량을 적극 따르십시오.<br>
+									> 노출된 철판에는 직접 사용하지 마십시오. 애칭 프라이머 사용 후 프라이머를 사용해야 합니다.<br>
+								</p>
+								
+								<button id="reset" type="reset" onclick="reset()">초기화</button>
+
+								<select id="GS_select" onchange="changeSelect()">
+									<option value="901">GS901 Black</option>
+									<option value="903">GS903 White</option>
+									<option value="905">GS905 Light grey</option>
+									<option value="906">GS906 Grey</option>
+									<option value="907">GS907 Mid Grey</option>
+									<option value="908">GS908 Dark Grey</option>
 								</select>
 
-								<table class="outer_table">
-									<tr>
-										<td>PH-254 (g)</td>
-										<td>H25 (g)</td>
-										<td>TA910 (g)</td>
-										<td>목표배합량 (g)</td>
-									</tr>
-									<tr>
-										<td>
-											<table class="inner_table">
+								<div> 
+									<div class="cal-table">
+										<table class="calculator_table" border="1">
+											<thead class="cal-table-th">
 												<tr>
-													<td>화이트</td>
-													<td id="white">0</td>
-													<td>블랙</td>
-													<td id="black">100</td>
+													<th scope="col" colspan="2">PH-254 (g)</th>
+													<th scope="col" colspan="2" rowspan="2">H25 (g)</th>
+													<th scope="col" colspan="2" rowspan="2">TA910 (g)</th>
+													<th scope="col" colspan="2" rowspan="2">목표 배합량 (g)</th>
 												</tr>
-											</table>
-										</td>
-										<td>14.4</td>
-										<td>22.6</td>
-										<td>
-											<input type="text" value="100">
-										</td>
-									</tr>
-								</table>  
-								
-								<button class="calculator_input" onclick="calculator()">배합비 계산</button>
-
-							<!--</form>-->
-						</div>
+												<tr>
+													<th scope="col">화이트</th>
+													<th scope="col">블랙</th>
+												</tr>
+											</thead>
+											<tbody id="cal-table-tb">
+												<tr>
+													<td id="white" scope="col"></th>
+													<td id="black" scope="col"></th>
+													<td id="H25" scope="col" colspan="2"></td>
+													<td id="TA910" scope="col" colspan="2"></td>
+													<td>
+														<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
+														<input id="button_result" type="button" value="계산" onclick="calculator()">
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+					</div>
 					
                 </div>
 		    </div>

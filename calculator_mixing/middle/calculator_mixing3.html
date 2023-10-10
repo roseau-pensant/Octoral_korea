@@ -5,10 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>배합비 계산기</title>
 		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
-		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../skin/octoral/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
+		<script defer src="calculator_middle3.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 <body>
     <div id="container">
@@ -40,9 +41,9 @@
 						</div>
 						<hr>
 						<div class="button_club">
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">일반 철판 작업</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">플라스틱 교환제품 OR <br>철판 동시 작업시</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 회색 음영 <br>배합비</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머 - 일반적인 교환철판</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">PH-254 논샌딩 프라이머 - 일반적인 플러스틱 범퍼교환</button></div>
+							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 회색 음영 <br>배합비</button></div>
 						</div>
 						<div class="button_club">
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing4.html'">AW001 인테리어도장 배합비</button></div>
@@ -53,39 +54,53 @@
 					</div>
 					<br>
 						<div class="calculator_box">
-							<form action=" " method="get" id="calculator_1">
-								<p>신너의 양은 점도를 선호하는 스프레이 취향에 따라 다를 수 있으니 작업자가 점도조정을 위해 자율적으로 조정하여 사용하십시오.				
-                                </p>
+								<h2>PF131 - 서페이서 회색 음영 배합비</h2>
+								<p>
+									> 신너의 양은 점도를 선호하는 스프레이 취향에 따라 다를 수 있으니 작업자가 점도조정을 위해 <br>
+									> 자율적으로 조정하여 사용하십시오. <br>
+									> 높은 살오름성은 신너를 줄이고 매끈한 표면을 위해서는 신너량을 늘리십시오. <br>
+									> S20페인트 엑셀레이터를 경화제 양에 약2~3% 첨가하면 건조시간을 30~50% 줄일수 있습니다. <br>
+								</p>
 
-								<select name="GSxxx" onchange="if(this.value) location.href=(this.value);">
-									<option value="GS901 Black">GS901 Black</option>
-									<option value="GS903 White">GS903 White</option>
-									<option value="GS905 Light grey">GS905 Light grey</option>
-									<option value="GS906 Grey">GS906 Grey</option>
-									<option value="GS907 Mid Grey">GS907 Mid Grey</option>
-									<option value="GS908 Dark Grey">GS908 Dark Grey</option>
+								<button id="reset" type="reset" onclick="reset()">초기화</button>
+
+								<select id="GS_select" onchange="changeSelect()">
+									<option value="901">GS901 Black</option>
+									<option value="903">GS903 White</option>
+									<option value="905">GS905 Light grey</option>
+									<option value="906">GS906 Grey</option>
+									<option value="907">GS907 Mid Grey</option>
+									<option value="908">GS908 Dark Grey</option>
 								</select>
 
-								<table class="outer_table">
-									<tr>
-										<td>PF-131 (g)</td>
-										<td>H25 (g)</td>
-										<td>TA910 (g)</td>
-										<td>목표배합량 (g)</td>
-									</tr>
-									<tr>
-										<td>
-											<table class="inner_table"><tr><td>화이트: 0</td><td>블랙: 100</td></tr></table>
-										</td>
-										<td>11.0</td>
-										<td>16.2</td>
-										<td><input type="text" value="100"></td>
-									</tr>
-								</table>  
-
-								<button class="calculator_input" onclick="">배합비 계산</button>
-
-							</form>
+								<div class="cal-table">
+									<table class="calculator_table" border="1">
+										<thead class="cal-table-th">
+											<tr>
+												<th scope="col" colspan="2">PF-131 (g)</th>
+												<th scope="col" colspan="2" rowspan="2">H25 (g)</th>
+												<th scope="col" colspan="2" rowspan="2">PF131_TA910 (g)</th>
+												<th scope="col" colspan="2" rowspan="2">목표 배합량 (g)</th>
+											</tr>
+											<tr>
+												<th scope="col">화이트</th>
+												<th scope="col">블랙</th>
+											</tr>
+										</thead>
+										<tbody id="cal-table-tb">
+											<tr>
+												<td id="white" scope="col"></th>
+												<td id="black" scope="col"></th>
+												<td id="H25" scope="col" colspan="2"></td>
+												<td id="PF131_TA910" scope="col" colspan="2"></td>
+												<td>
+													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
+													<input id="button_result" type="button" value="계산" onclick="calculator()">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 						</div>
 					
                 </div>
