@@ -1,8 +1,9 @@
 //기본고정값
 const C150 = 66.2;
 const H55 = 33.5;
-const C150_TA910 = 5.0;
+const C150_TA910 = 4.5;
 const S20 = 0.30;
+const Sgravity = 0.903;
 
 //첫로딩화면, GS901 100g 기준
 document.getElementById("C150").innerHTML = C150;
@@ -29,7 +30,7 @@ function calculator(){
     var final_H55 = change_H55.toFixed(1);
     final_H55 *= 1;
 
-    change_TA910 = (final_C150+final_H55)*0.05;
+    change_TA910 = (final_C150+final_H55)*0.05*Sgravity;
     const final_TA910 = change_TA910.toFixed(1);
 
     change_S20 = final_H55*0.01*0.88;
@@ -46,7 +47,7 @@ $('#reset').click(function () {
 
     //처음 위치로 돌아가기 
     $("#C150").html(C150);
-    $("#H23_26").html(H55);
+    $("#H55").html(H55);
     $("#C150_TA910").html(C150_TA910);
     $("#S20").html(S20);
     $("#change_result").val("100");

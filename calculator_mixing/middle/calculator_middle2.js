@@ -126,8 +126,8 @@ function calculator(){
         change_H25 = changeResult*(H25/100);
         change_PA65 = changeResult*(PA65/100);
 
-        const final_white = nowWhite.toFixed(1);
-        const final_black = nowBlack.toFixed(1);
+        const final_white = nowWhite.toFixed(2);
+        const final_black = nowBlack.toFixed(2);
         const final_H25 = change_H25.toFixed(1);
         const final_PA65 = change_PA65.toFixed(1);
 
@@ -143,8 +143,8 @@ function calculator(){
         change_H25 = changeResult*(H25/100);
         change_PA65 = changeResult*(PA65/100);
 
-        const final_white = nowWhite.toFixed(1);
-        const final_black = nowBlack.toFixed(1);
+        const final_white = nowWhite.toFixed(2);
+        const final_black = nowBlack.toFixed(2);
         const final_H25 = change_H25.toFixed(1);
         const final_PA65 = change_PA65.toFixed(1);
 
@@ -160,8 +160,8 @@ function calculator(){
         change_H25 = changeResult*(H25/100);
         change_PA65 = changeResult*(PA65/100);
 
-        const final_white = nowWhite.toFixed(1);
-        const final_black = nowBlack.toFixed(1);
+        const final_white = nowWhite.toFixed(2);
+        const final_black = nowBlack.toFixed(2);
         const final_H25 = change_H25.toFixed(1);
         const final_PA65 = change_PA65.toFixed(1);
 
@@ -177,8 +177,8 @@ function calculator(){
         change_H25 = changeResult*(H25/100);
         change_PA65 = changeResult*(PA65/100);
 
-        const final_white = nowWhite.toFixed(1);
-        const final_black = nowBlack.toFixed(1);
+        const final_white = nowWhite.toFixed(2);
+        const final_black = nowBlack.toFixed(2);
         const final_H25 = change_H25.toFixed(1);
         const final_PA65 = change_PA65.toFixed(1);
 
@@ -194,8 +194,8 @@ function calculator(){
         change_H25 = changeResult*(H25/100);
         change_PA65 = changeResult*(PA65/100);
 
-        const final_white = nowWhite.toFixed(1);
-        const final_black = nowBlack.toFixed(1);
+        const final_white = nowWhite.toFixed(2);
+        const final_black = nowBlack.toFixed(2);
         const final_H25 = change_H25.toFixed(1);
         const final_PA65 = change_PA65.toFixed(1);
 
@@ -211,8 +211,8 @@ function calculator(){
         change_H25 = changeResult*(H25/100);
         change_PA65 = changeResult*(PA65/100);
 
-        const final_white = nowWhite.toFixed(1);
-        const final_black = nowBlack.toFixed(1);
+        const final_white = nowWhite.toFixed(2);
+        const final_black = nowBlack.toFixed(2);
         const final_H25 = change_H25.toFixed(1);
         const final_PA65 = change_PA65.toFixed(1);
 

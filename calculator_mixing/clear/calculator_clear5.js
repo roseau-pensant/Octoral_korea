@@ -1,7 +1,8 @@
 //기본고정값
 const C600 = 66.3;
 const H60 = 33.8;
-const C600_TA910 = 5.0;
+const C600_TA910 = 4.5;
+const Sgravity = 0.903;
 
 //첫로딩화면
 document.getElementById("C600").innerHTML = C600;
@@ -27,7 +28,7 @@ function calculator(){
    var final_H60 = change_H25.toFixed(1);
    final_H60 *= 1;
 
-   change_C600_TA910 = (final_C600+final_H60)*0.05;
+   change_C600_TA910 = (final_C600+final_H60)*0.05*Sgravity;
    const final_C600_TA910 = change_C600_TA910.toFixed(1);
 
    document.getElementById("C600").innerHTML = final_C600;
@@ -40,9 +41,9 @@ $(
 '#reset').click(function () {
 
      //처음 위치로 돌아가기 
-     $("#C500").html(C600);
+     $("#C600").html(C600);
      $("#H60").html(H60);
      $("#C600_TA910").html(C600_TA910);
-     $("#change_result").val("1000");
+     $("#change_result").val("100");
 
 });

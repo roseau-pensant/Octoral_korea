@@ -48,31 +48,36 @@ function changeSelect(){
     if(selectValue == 1){
         document.getElementById("CM267").innerHTML = M1.CM267;
         document.getElementById("CM269").innerHTML = M1.CM269;
+        document.getElementById("HM260").innerHTML = HM260;
+        document.getElementById("TM261").innerHTML = TM261;
         document.getElementById("change_result").value = 100;
 
     }else if(selectValue == 2){
         document.getElementById("CM267").innerHTML = M2.CM267;
         document.getElementById("CM269").innerHTML = M2.CM269;
+        document.getElementById("HM260").innerHTML = HM260;
+        document.getElementById("TM261").innerHTML = TM261;
         document.getElementById("change_result").value = 100;
 
     }else if(selectValue == 3){
         document.getElementById("CM267").innerHTML = M3.CM267;
         document.getElementById("CM269").innerHTML = M3.CM269;
+        document.getElementById("HM260").innerHTML = HM260;
+        document.getElementById("TM261").innerHTML = TM261;
         document.getElementById("change_result").value = 100;
 
     }else if(selectValue == 4){
         document.getElementById("CM267").innerHTML = M4.CM267;
         document.getElementById("CM269").innerHTML = M4.CM269;
+        document.getElementById("HM260").innerHTML = HM260;
+        document.getElementById("TM261").innerHTML = TM261;
         document.getElementById("change_result").value = 100;
 
     }else if(selectValue == 5){
         document.getElementById("CM267").innerHTML = M5.CM267;
         document.getElementById("CM269").innerHTML = M5.CM269;
-        document.getElementById("change_result").value = 100;
-
-    }else if(selectValue == 6){
-        document.getElementById("CM267").innerHTML = M6.CM267;
-        document.getElementById("CM269").innerHTML = M6.CM269;
+        document.getElementById("HM260").innerHTML = HM260;
+        document.getElementById("TM261").innerHTML = TM261;
         document.getElementById("change_result").value = 100;
 
     }else{
@@ -100,7 +105,7 @@ function calculator(){
         const final_CM267 = change_CM267.toFixed(2);
         const final_CM269 = change_CM269.toFixed(2);
         const final_HM260 = change_HM260.toFixed(1);
-        const final_TM261 = change_TM261.toFixed(1);
+        const final_TM261 = change_TM261.toFixed(2);
     
         document.getElementById("CM267").innerHTML = final_CM267;
         document.getElementById("CM269").innerHTML = final_CM269;
@@ -117,7 +122,7 @@ function calculator(){
         const final_CM267 = change_CM267.toFixed(1);
         const final_CM269 = change_CM269.toFixed(1);
         const final_HM260 = change_HM260.toFixed(1);
-        const final_TM261 = change_TM261.toFixed(1);
+        const final_TM261 = change_TM261.toFixed(2);
     
         document.getElementById("CM267").innerHTML = final_CM267;
         document.getElementById("CM269").innerHTML = final_CM269;
@@ -134,7 +139,7 @@ function calculator(){
         const final_CM267 = change_CM267.toFixed(2);
         const final_CM269 = change_CM269.toFixed(2);
         const final_HM260 = change_HM260.toFixed(1);
-        const final_TM261 = change_TM261.toFixed(1);
+        const final_TM261 = change_TM261.toFixed(2);
     
         document.getElementById("CM267").innerHTML = final_CM267;
         document.getElementById("CM269").innerHTML = final_CM269;
@@ -151,7 +156,7 @@ function calculator(){
         const final_CM267 = change_CM267.toFixed(2);
         const final_CM269 = change_CM269.toFixed(2);
         const final_HM260 = change_HM260.toFixed(1);
-        const final_TM261 = change_TM261.toFixed(1);
+        const final_TM261 = change_TM261.toFixed(2);
     
         document.getElementById("CM267").innerHTML = final_CM267;
         document.getElementById("CM269").innerHTML = final_CM269;
@@ -168,7 +173,7 @@ function calculator(){
         const final_CM267 = change_CM267.toFixed(2);
         const final_CM269 = change_CM269.toFixed(2);
         const final_HM260 = change_HM260.toFixed(1);
-        const final_TM261 = change_TM261.toFixed(1);
+        const final_TM261 = change_TM261.toFixed(2);
     
         document.getElementById("CM267").innerHTML = final_CM267;
         document.getElementById("CM269").innerHTML = final_CM269;
@@ -185,7 +190,7 @@ function calculator(){
         const final_CM267 = change_CM267.toFixed(2);
         const final_CM269 = change_CM269.toFixed(2);
         const final_HM260 = change_HM260.toFixed(1);
-        const final_TM261 = change_TM261.toFixed(1);
+        const final_TM261 = change_TM261.toFixed(2);
     
         document.getElementById("CM267").innerHTML = final_CM267;
         document.getElementById("CM269").innerHTML = final_CM269;
