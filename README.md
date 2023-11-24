@@ -1,4 +1,5 @@
 # Octoral_korea
-Renew Octoral korean version, Manage Web site and maintenance
+Renew Octoral korean version  
+Managing and Maintaining Web site.
 
 link => www.octoral.kr
