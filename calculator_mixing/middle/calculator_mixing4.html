@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -92,4 +93,99 @@
 
 	</div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>배합비 계산기</title>
+		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
+		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
+		<script defer src="calculator_middle4.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+<body>
+    <div id="container">
+
+		<header id="top">
+
+			<div class="container">
+
+				<div class="subcontainer subcontainer-top">
+
+				</div>
+
+			</div>
+
+		</header>
+
+		<div id="content">
+
+			<div class="container">
+
+                <div class="subcontainer row">
+
+                    <h1 style="text-align: center; font-family: Nanumsquare; padding-bottom: 2px;">크리어 / 프라이머 배합계산기</h1>
+					<br>
+					<div>
+						<div class="calculator_change">
+							<h2 class="calculator_change1"><a href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change2"><a class="calculator_change_click" href="../middle/calculator_mixing1.html">프라이머</a></h2>
+						</div>
+						<hr>
+						<div class="button_club">
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 <br>회색 음영 배합비</button></div>
+							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing4.html'">AW001 인테리어도장 배합비</button></div>
+						</div>
+						<div class="button_club">
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing5.html'">PW170 워시프라이머 배합비</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing6.html'">PE130 애폭시 프라이머</button></div>
+						</div>
+						<hr>
+					</div>
+					<br>
+						<div class="calculator_box">
+
+							<h2>AW001 인테리어도장 배합비</h2>
+							<button id="reset" type="reset" onclick="reset()">초기화</button>
+
+							<div> 
+								<div class="cal-table">
+									<table class="calculator_table" border="1">
+										<thead class="cal-table-th">
+											<tr>
+												<th scope="col">AW001 (g)</th>
+												<th scope="col">H23~26 (g)</th>
+												<th scope="col">목표 배합량 (g) <inline style="font-size: 15px;">/ 수용성 베이스코트+TW80</inline></th>
+											</tr>
+										</thead>
+										<tbody id="cal-table-tb">
+											<tr>
+												<td id="AW001" scope="col"></td>
+												<td id="H23_26" scope="col"></td>
+												<td>
+													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
+													<input id="button_result" type="button" value="계산" onclick="calculator()">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+						</div>
+					
+                </div>
+		    </div>
+
+
+		
+
+	</div>
+</body>
+>>>>>>> 887b5fb135e070c90c0097d0b6ed0fcffed83095
 </html>

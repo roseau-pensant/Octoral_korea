@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -105,4 +106,112 @@
 
 	</div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		<title>배합비 계산기</title>
+		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
+		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
+		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
+		<script defer src="calculator_clear5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+<body>
+    <div id="container">
+
+		<header id="top">
+
+			<div class="container">
+
+				<div class="subcontainer subcontainer-top">
+
+				</div>
+
+			</div>
+
+		</header>
+
+		<div id="content">
+
+			<div class="container">
+
+                <div class="subcontainer row">
+
+                    <h1 style="text-align: center; font-family: Nanumsquare; padding-bottom: 2px;">크리어 / 프라이머 배합계산기</h1>
+                    <br>
+					<div>
+						<div class="calculator_change">
+							<h2 class="calculator_change1"><a class="calculator_change_click" href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change2"><a href="../middle/calculator_mixing1.html">프라이머</a></h2>
+						</div>
+						<hr>
+						<div class="button_club2">
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c150.html'">C150</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C450</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_1.html'">C500 (TA910)</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_2.html'">C500 (AP871)</button></div>
+						</div>
+						<div class="button_club2">
+							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='c600.html'">C600</button></div>
+							<div style="text-align:center;"><button class="w-btn2-cm267-269" type="button" onclick="location.href='CM267_269.html'">무광크리어시스템 CM267/CM269</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='Spralac_SP4499.html'">Spralac_SP4499</button></div>
+						</div>
+						<hr>
+					</div>
+					
+                    <div class="calculator_box">
+						<br>
+						<h1>C600 RAPID PRODUCTION CLEAR 부피비 2:1 </h1>
+						<ul>
+							<li>건조는 45도 부근에서 이루어 집니다. 55도 부근에서 완전 건조가 되므로 부스장에서 꺼내십시오.</li>
+							<li>식은 후 조립 및 광택작업을 진행하십시오.  신너는 0~5% 취향 것 사용하시면 됩니다.</li>
+							<li>자동차 제조사는 전기차 가열건조를 60도 미만에서 30분 미만으로 마치라고 권장합니다.
+								<br>배터리 충방전에 문제를 일으킬 수 있다는 주의사항을 교육합니다. 전기차 크리어에 최적화 되었습니다.
+							</li>
+						</ul>
+						
+                        <button id="reset" type="reset" onclick="reset()">초기화</button>
+
+							<div> 
+								<div class="cal-table">
+									<table class="calculator_table" border="1">
+										<thead class="cal-table-th">
+											<tr>
+												<th scope="col">C600</th>
+												<th scope="col">H60</th>
+												<th scope="col">TA910</th>
+												<th scope="col">배합량 (L)<br></th>
+											</tr>
+										</thead>
+										<tbody id="cal-table-tb">
+											<tr>
+												<td id="C600" scope="col"></td>
+												<td id="H60" scope="col"></td>
+												<td id="C600_TA910" scope="col"></td>
+												<td>
+													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
+													<span class="cal-CC">(CC)</span>
+													<input id="button_result" type="button" value="계산" onclick="calculator()">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+                    </div>
+
+
+                 </div>
+		    </div>
+
+
+		
+
+	</div>
+</body>
+>>>>>>> 887b5fb135e070c90c0097d0b6ed0fcffed83095
 </html>
