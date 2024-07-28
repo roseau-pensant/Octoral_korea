@@ -8,7 +8,7 @@ const water_sp3199 = 0.903;
 const water_s20 = 0.88;
 
 //실배합량
-const first_result = 300;
+const first_result = 1000;
 const SP4499 = first_result/4*3;
 const SP2599 = first_result/4;
 const SP2499 = first_result/4;
@@ -24,18 +24,10 @@ const SP2499_1 = (water_sp2499*SP2499).toFixed(1);
 const SP2699_1 = (water_sp2699*SP2699).toFixed(1);
 const SP3099_1 = (water_sp3099*SP3099).toFixed(2);
 const SP3199_1 = (water_sp3199*SP3199).toFixed(2);
-const S20_1 = (S20*0.88).toFixed(2);
+const S20_1 = (water_s20*S20).toFixed(2);
 
 
 //첫로딩화면
-document.getElementById("SP4499_0").innerHTML = water_sp4499;
-document.getElementById("SP2599_0").innerHTML = water_sp2599;
-document.getElementById("SP2499_0").innerHTML = water_sp2499;
-document.getElementById("SP2699_0").innerHTML = water_sp2699;
-document.getElementById("SP3099_0").innerHTML = water_sp3099;
-document.getElementById("SP3199_0").innerHTML = water_sp3199;
-document.getElementById("S20_0").innerHTML = water_s20;
-
 document.getElementById("SP4499_1").innerHTML = SP4499;
 document.getElementById("SP2599_1").innerHTML = SP2599;
 document.getElementById("SP2499_1").innerHTML = SP2499;
@@ -57,7 +49,7 @@ document.getElementById("S20_2").innerHTML = S20_1;
 function calculator(){
 
     //사용자가 배합량 설정후 클릭
-    const changeResult = document.getElementById("change_result").value;
+    const changeResult = document.getElementById("change_result_").value;
 
     //실배합량
     var change_SP4499_1 = changeResult/4*3;
@@ -66,7 +58,7 @@ function calculator(){
     var change_SP2699_1 = changeResult/4;
     var change_SP3099_1 = changeResult*0.05;
     var change_SP3199_1 = changeResult*0.05;
-    var change_S20_1 = change_SP2599_1*0.03;
+    var change_S20_1 = (change_SP2599_1*0.03).toFixed(2);
 
     //실배합 무게
     var change_SP4499_2 = (water_sp4499*change_SP4499_1).toFixed(1);
@@ -75,7 +67,7 @@ function calculator(){
     var change_SP2699_2 = (water_sp2699*change_SP2699_1).toFixed(1);
     var change_SP3099_2 = (water_sp3099*change_SP3099_1).toFixed(2);
     var change_SP3199_2 = (water_sp3199*change_SP3199_1).toFixed(2);
-    var change_S20_2 = (change_S20_1*0.88).toFixed(2);
+    var change_S20_2 = (change_S20_1*water_s20).toFixed(2);
 
     document.getElementById("SP4499_1").innerHTML = change_SP4499_1;
     document.getElementById("SP2599_1").innerHTML = change_SP2599_1;
@@ -110,6 +102,6 @@ $('#reset').click(function () {
     $("#SP2699_2").html(SP2699_1);
     $("#SP3099_2").html(SP3099_1);
     $("#SP3199_2").html(SP3199_1);
-    $("#change_result").val("300");
+    $("#change_result_").val("1000");
 
 });

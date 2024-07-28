@@ -1,7 +1,8 @@
 //기본고정값
 const C500 = 712.1;
 const H25 = 254.0;
-const AP871 = 96.6;
+const AP871 = 84.1;
+const Sgravity = 0.871;
 
 //첫로딩화면
 document.getElementById("C500").innerHTML = C500;
@@ -27,7 +28,7 @@ function calculator(){
     var final_H25 = change_H25.toFixed(1);
     final_H25 *= 1;
 
-    change_AP871 = (final_C500+final_H25)*0.1;
+    change_AP871 = (final_C500+final_H25)*0.1*Sgravity;
     const final_AP871 = change_AP871.toFixed(1);
 
     document.getElementById("C500").innerHTML = final_C500;

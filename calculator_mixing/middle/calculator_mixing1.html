@@ -2,13 +2,14 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
 		<title>배합비 계산기</title>
 		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
-		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
-		<script defer src="calculator_middle1.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />				
+		<link rel="stylesheet" type="text/css" href="../../skin/cal_sub.css" />
+		<script type= text/javascript defer src="calculator_middle1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 <body>
@@ -32,21 +33,20 @@
 
                 <div class="subcontainer row">
 
-                    <div style="text-align: center;"><h1 style="font-family: Nanumsquare; padding-bottom: 2px;">배합비 계산기</h1></div> 
+                    <h1 style="text-align: center; font-family: Nanumsquare; padding-bottom: 2px;">크리어 / 프라이머 배합계산기</h1>
 					<br>
 					<div>
 						<div class="calculator_change">
-							<h2 class="calculator_change1"><a href="../middle/calculator_mixing1.html">중도</a></h2>
-							<h2 class="calculator_change2"><a href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change1"><a href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change2"><a class="calculator_change_click" href="../middle/calculator_mixing1.html">프라이머</a></h2>
 						</div>
 						<hr>
 						<div class="button_club">
-							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머 - 일반적인 교환철판</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">PH-254 논샌딩 프라이머 - 일반적인 플러스틱 범퍼교환</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 회색 음영 <br>배합비</button></div>
+							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 <br>회색 음영 배합비</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing4.html'">AW001 인테리어도장 배합비</button></div>
 						</div>
 						<div class="button_club">
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing4.html'">AW001 인테리어도장 배합비</button></div>
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing5.html'">PW170 워시프라이머 배합비</button></div>
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing6.html'">PE130 애폭시 프라이머</button></div>
 						</div>
@@ -54,18 +54,35 @@
 					</div>
 					<br>
 					<div class="calculator_box">
-
-								<h2>PH-254 논샌딩 프라이머 - 일반적인 교환철판</h2>
-								<h3>**e-coat 위에 샌딩 없이 도포하십시오.</h3>
-								<p>
-									> 신너(TA910)가 적으면 건조가 늦고 많으면 건조가 빠르지만 도막 두께를 염두에 둔다면<br>
-									> 권장량을 적극 따르십시오.<br>
-									> 노출된 철판에는 직접 사용하지 마십시오. 애칭 프라이머 사용 후 프라이머를 사용해야 합니다.<br>
-								</p>
+								<div class="ph254_title">
+									<div>
+										<h1 style="font-family: Nanumsquare;">PH-254 논샌딩 프라이머</h1>
+										<h2>HS420 부피비 5:1 + 25% 유니 희석제</h2>
+										<h3>**e-coat 위에 샌딩 없이 도포하십시오.</h3>
+									</div>
+								</div>
+					
+								<select id="ph254_choice" onchange="PH254_choice()">
+									<option value="TA910_choice">일반적인 교환철판 - TA910</option>
+									<option value="PA65_choice">일반적인 플러스틱 범퍼교환 - PA65</option>
+								</select>
+								
+								<table class="ph254_choice_table" border="1">
+									<thead>
+										<tr>
+											<th id="ph254_material"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="ph254_material_">
+											<td id="ph254_material_"></td>
+										</tr>
+									</tbody>
+								</table>
 								
 								<button id="reset" type="reset" onclick="reset()">초기화</button>
 
-								<select id="GS_select" onchange="changeSelect()">
+								<select id="GS_select" onchange="changeSelect1()">
 									<option value="901">GS901 Black</option>
 									<option value="903">GS903 White</option>
 									<option value="905">GS905 Light grey</option>
@@ -73,16 +90,16 @@
 									<option value="907">GS907 Mid Grey</option>
 									<option value="908">GS908 Dark Grey</option>
 								</select>
-
+								
 								<div> 
 									<div class="cal-table">
 										<table class="calculator_table" border="1">
 											<thead class="cal-table-th">
 												<tr>
-													<th scope="col" colspan="2">PH-254 (g)</th>
+													<th scope="col" colspan="2">PH-254</th>
 													<th scope="col" colspan="2" rowspan="2">H25 (g)</th>
-													<th scope="col" colspan="2" rowspan="2">TA910 (g)</th>
-													<th scope="col" colspan="2" rowspan="2">목표 배합량 (g)</th>
+													<th scope="col" colspan="2" rowspan="2" id="ta910/pa65"></th>
+													<th scope="col" colspan="2" rowspan="2">주제 배합량 (CC)</th>
 												</tr>
 												<tr>
 													<th scope="col">화이트</th>
@@ -94,10 +111,10 @@
 													<td id="white" scope="col"></th>
 													<td id="black" scope="col"></th>
 													<td id="H25" scope="col" colspan="2"></td>
-													<td id="TA910" scope="col" colspan="2"></td>
+													<td id="change_choice" scope="col" colspan="2"></td>
 													<td>
 														<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
-														<input id="button_result" type="button" value="계산" onclick="calculator()">
+														<input id="button_result" type="button" value="계산 (enter)" onclick="calculator()">
 													</td>
 												</tr>
 											</tbody>

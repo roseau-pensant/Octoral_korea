@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
+		<link rel="stylesheet" type="text/css" href="../../skin/cal_sub.css" />
 		<script defer src="calculator_middle3.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
@@ -32,21 +33,20 @@
 
                 <div class="subcontainer row">
 
-                    <div style="text-align: center;"><h1 style="font-family: Nanumsquare; padding-bottom: 2px;">배합비 계산기</h1></div> 
+                    <h1 style="text-align: center; font-family: Nanumsquare; padding-bottom: 2px;">크리어 / 프라이머 배합계산기</h1>
 					<br>
 					<div>
 						<div class="calculator_change">
-							<h2 class="calculator_change1"><a href="../middle/calculator_mixing1.html">중도</a></h2>
-							<h2 class="calculator_change2"><a href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change1"><a href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change2"><a class="calculator_change_click" href="../middle/calculator_mixing1.html">프라이머</a></h2>
 						</div>
 						<hr>
 						<div class="button_club">
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머 - 일반적인 교환철판</button></div>
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing2.html'">PH-254 논샌딩 프라이머 - 일반적인 플러스틱 범퍼교환</button></div>
-							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 회색 음영 <br>배합비</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing1.html'">PH-254 논샌딩 프라이머</button></div>
+							<div><button class="w-btn1-click" type="button" onclick="location.href='calculator_mixing3.html'">PF131 서페이서 <br>회색 음영 배합비</button></div>
+							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing4.html'">AW001 인테리어도장 배합비</button></div>
 						</div>
 						<div class="button_club">
-							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing4.html'">AW001 인테리어도장 배합비</button></div>
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing5.html'">PW170 워시프라이머 배합비</button></div>
 							<div><button class="w-btn1" type="button" onclick="location.href='calculator_mixing6.html'">PE130 애폭시 프라이머</button></div>
 						</div>
@@ -54,13 +54,32 @@
 					</div>
 					<br>
 						<div class="calculator_box">
-								<h2>PF131 - 서페이서 회색 음영 배합비</h2>
-								<p>
-									> 신너의 양은 점도를 선호하는 스프레이 취향에 따라 다를 수 있으니 작업자가 점도조정을 위해 <br>
-									> 자율적으로 조정하여 사용하십시오. <br>
-									> 높은 살오름성은 신너를 줄이고 매끈한 표면을 위해서는 신너량을 늘리십시오. <br>
-									> S20페인트 엑셀레이터를 경화제 양에 약2~3% 첨가하면 건조시간을 30~50% 줄일수 있습니다. <br>
-								</p>
+								<h1>PF131 HS서페이서</h1>
+								<h2>HS420 부피비 6:1 + 샌딩25% 유니 희석제 / 논샌딩35% 유니 희석제</h2>
+								<ul>
+									<li>신너의 양은 점도를 선호하는 스프레이 취향에 따라 다를 수 있으니 작업자가 점도조정을 위해
+									자율적으로 조정하여 사용하십시오.</li>
+									<li>높은 살오름성은 신너를 줄이고 매끈한 표면을 위해서는 신너량을 늘리십시오.</li>
+									<li>S20페인트 엑셀레이터를 경화제 양에 약2~3% 첨가하면 건조시간을 30~50% 줄일수 있습니다.</li>
+								</ul>
+
+
+								<table class="ph254_choice_table" border="1">
+									<thead>
+										<tr>
+											<th style="font-size: 20px; padding: 10px;">TA910 샌딩/논샌딩</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="ph254_material_">
+											<td style="padding: 1%; font-size: 15px;">
+													<li>TA910을 <b>25% 섞으면 샌딩 버전,</b> TA910을 <b>35% 섞으면 논샌딩 버전</b> 입니다.</li>
+													<li>논샌딩 버전으로 사용할 때는 사전에 피도물을 샌딩처리 하여야 합니다. 이것은 PH254와 다른 부분입니다.</li>	
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							
 
 								<button id="reset" type="reset" onclick="reset()">초기화</button>
 
@@ -73,13 +92,18 @@
 									<option value="908">GS908 Dark Grey</option>
 								</select>
 
+								<select id="sanding_choice" onchange="sanding_choice()">
+									<option value="sanding">샌딩</option>
+									<option value="nonsanding">논샌딩</option>
+								</select>
+
 								<div class="cal-table">
 									<table class="calculator_table" border="1">
 										<thead class="cal-table-th">
 											<tr>
 												<th scope="col" colspan="2">PF-131 (g)</th>
 												<th scope="col" colspan="2" rowspan="2">H25 (g)</th>
-												<th scope="col" colspan="2" rowspan="2">PF131_TA910 (g)</th>
+												<th id="sanding" scope="col" colspan="2" rowspan="2"></th>
 												<th scope="col" colspan="2" rowspan="2">목표 배합량 (g)</th>
 											</tr>
 											<tr>
@@ -92,14 +116,15 @@
 												<td id="white" scope="col"></th>
 												<td id="black" scope="col"></th>
 												<td id="H25" scope="col" colspan="2"></td>
-												<td id="PF131_TA910" scope="col" colspan="2"></td>
+												<td id="TA910_change_sanding" scope="col" colspan="2"></td>
 												<td>
 													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
-													<input id="button_result" type="button" value="계산" onclick="calculator()">
+													<input id="button_result" type="button" value="계산 (enter)" onclick="calculator()">
 												</td>
 											</tr>
 										</tbody>
 									</table>
+
 								</div>
 						</div>
 					

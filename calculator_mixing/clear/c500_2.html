@@ -2,12 +2,13 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
 		<title>배합비 계산기</title>
 		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
+		<link rel="stylesheet" type="text/css" href="../../skin/cal_sub.css" />
 		<script defer src="calculator_clear4.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
@@ -32,23 +33,23 @@
 
                 <div class="subcontainer row">
 
-                    <h1 style="text-align: center; font-family: Nanumsquare; padding-bottom: 2px;">배합비 계산기</h1>
+                    <h1 style="text-align: center; font-family: Nanumsquare; padding-bottom: 2px;">크리어 / 프라이머 배합계산기</h1>
                     <br>
 					<div>
 						<div class="calculator_change">
-							<h2 class="calculator_change1"><a href="../middle/calculator_mixing1.html">중도</a></h2>
-							<h2 class="calculator_change2"><a href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change1"><a class="calculator_change_click" href="../clear/c150.html">크리어</a></h2>
+							<h2 class="calculator_change2"><a href="../middle/calculator_mixing1.html">프라이머</a></h2>
 						</div>
 						<hr>
 						<div class="button_club2">
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c150.html'">C150</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C500</button></div>
+							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C450</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_1.html'">C500 (TA910)</button></div>
 							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='c500_2.html'">C500 (AP871)</button></div>
 						</div>
 						<div class="button_club2">
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c600.html'">C600</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='CM267_269.html'">CM267/CM269</button></div>
+							<div style="text-align:center;"><button class="w-btn2-cm267-269" type="button" onclick="location.href='CM267_269.html'">무광크리어시스템 CM267/CM269</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='Spralac_SP4499.html'">Spralac_SP4499</button></div>
 						</div>
 						<hr>
@@ -57,10 +58,11 @@
                     <div class="calculator_box">
 						<br>
 						<h1>C500 HS420 SUPERB CLEAR COAT CURE BOOSTER_부피비 3:1</h1>
-						<p>
-							> 핀 홀 방지를 위해 습도가 65% 이상일 경우 H26 지건 경화제를 사용하십시오.<br>
-							> 고형분이 50%나 되는 UHS급 크리어 입니다. 반드시 신너를 5% 첨가 해야 합니다.
-						</p>
+						<ul>
+							<li>핀 홀 방지를 위해 습도가 65% 이상일 경우 H26 지건 경화제를 사용하십시오.</li>
+							<li>고형분이 50%나 되는 UHS급 크리어 입니다. 반드시 신너를 5% 첨가 해야 합니다.</li>
+						</ul>
+						
                         <button id="reset" type="reset" onclick="reset()">초기화</button>
 
 							<div> 
@@ -80,9 +82,9 @@
 												<td id="H25" scope="col"></td>
 												<td id="AP871" scope="col"></td>
 												<td>
-													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
-													<inline style="font-size: 25px;">(CC)</inline>
-													<input id="button_result" type="button" value="계산" onclick="calculator()">
+													<input id="change_result" type="text" value="1000" onkeypress="if(event.keyCode==13){calculator();}">
+													<span class="cal-CC">(CC)</span>
+													<input id="button_result" type="button" value="계산 (enter)" onclick="calculator()">
 												</td>
 											</tr>
 										</tbody>
