@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
 		<link rel="stylesheet" type="text/css" href="../../skin/cal_sub.css" />
-		<script defer src="calculator_clear6.js"></script>
+		<script defer src="calculator_clear2.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 <body>
@@ -43,13 +43,13 @@
 						<hr>
 						<div class="button_club2">
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c150.html'">C150</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c450.html'">C450</button></div>
+							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='c450.html'">C450</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_1.html'">C500 (TA910)</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_2.html'">C500 (AP871)</button></div>
 						</div>
 						<div class="button_club2">
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c600.html'">C600</button></div>
-							<div style="text-align:center;"><button class="w-btn2-cm267-269-click" type="button" onclick="location.href='CM267_269.html'">무광크리어시스템 CM267/CM269</button></div>
+							<div style="text-align:center;"><button class="w-btn2-cm267-269" type="button" onclick="location.href='CM267_269.html'">무광크리어시스템 CM267/CM269</button></div>
 							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='Spralac_SP4499.html'">Spralac_SP4499</button></div>
 						</div>
 						<hr>
@@ -57,47 +57,31 @@
 					
                     <div class="calculator_box">
 						<br>
-						<h1>CM267/CM269 MATT CLEAR COAT</h1>
+						<h1>C450  SCRATCH RESISTANT RAPID REPAIR CLEAR_부피비 5:1</h1>
+
 						<ul>
-							<li>플레쉬 오프 15~20분 / 강제건조 전 플레쉬 오프 30분 / 핸들링 타임 60도 40분</li>
-							<li>무광 스와치로 광택도를 결정 한 후 정확한 배합비와 플레쉬 오프 및 가열건조를 하지 않으면 색상이 구현되지 않을 가능성이 높습니다.</li>
-							<li>거의 모든 무광 크리어는 플레쉬 오프 타임이 길고 도장이 까다롭습니다. TDS를 참고하거나 트레이닝 센터로 문의를 주십시오.</li>
-							<li>식은 후 조립과 광택작업을 하십시오.  단,핸들링 타임은 소재의 온도가 60도에서 30분간 노출 되는 것을 말합니다.</li>
+							<li>www.octoral.kr 홈페이지 TDS 를 확인하세요.</li>
+							<li>C450은 60도씨를 초과하게 되면 소광됩니다. 60도씨 도달 전에 부스장에서 꺼내십시오. 또한 3판 이상 작업을 지양하십시오.</li>
+							<li>신너 등 첨가제를 절대로 사용하지 마십시오.</li>
+							<li>소광현상은  HS크리어의 과도막과 연관이 깊습니다.</li>
 						</ul>
-
 						
-						<div>
-							<button id="reset" type="reset" onclick="reset()">초기화</button>
-							<select id="MX_select" onchange="changeSelect()">
-								<option value="1">M1</option>
-								<option value="2">M2</option>
-								<option value="3">M3</option>
-								<option value="4">M4</option>
-								<option value="5">M5</option>
-							</select>
-							광택도
-
-						</div>
-						
+                        <button id="reset" type="reset" onclick="reset()">초기화</button>
 
 							<div> 
 								<div class="cal-table">
 									<table class="calculator_table" border="1">
 										<thead class="cal-table-th">
 											<tr>
-												<th scope="col">CM267 <br>Low Gloss</th>
-												<th scope="col">CM269 <br>Semi Gloss</th>
-												<th scope="col">HM260 <br>Hardener</th>
-												<th scope="col">TM261 <br>Thinner</th>
+												<th scope="col">C450</th>
+												<th scope="col">H25</th>
 												<th scope="col">배합량 (L)<br></th>
 											</tr>
 										</thead>
 										<tbody id="cal-table-tb">
 											<tr>
-												<td id="CM267" scope="col"></td>
-												<td id="CM269" scope="col"></td>
-												<td id="HM260" scope="col"></td>
-												<td id="TM261" scope="col"></td>
+												<td id="C450" scope="col"></td>
+												<td id="H25" scope="col"></td>
 												<td>
 													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
 													<span class="cal-CC">(CC)</span>

@@ -1,106 +1,35 @@
 <!DOCTYPE html>
-<html lang="ko" class="is-subpage">
+<html lang="ko">
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<title>한국 옥토랄</title>
-	<link href="media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
+    <title>한국 옥토랄</title>
+    <link href="media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="skin/style.v2.css" />
 	<link rel="stylesheet" type="text/css" href="scripts/lightbox/lightbox.css" />
 	<link rel="stylesheet" type="text/css" href="skin/fonts/frutiger/style.css" />
 	<link rel="stylesheet" type="text/css" href="skin/consent.css"/>
-	<link rel="stylesheet" type="text/css" href="skin/button.css"> 
 
-	
+
 	<script type="text/javascript" src="scripts/mootools/core.js"></script>
 	<script type="text/javascript" src="scripts/google/maps.js"></script>
 	<script type="text/javascript" src="scripts/mootools/more.js"></script>
 	<script type="text/javascript" src="scripts/fx/impress.js"></script>
 	<script type="text/javascript" src="scripts/lightbox/lightbox.js"></script>
 	<script type="text/javascript" src="scripts/various.js"></script>
-	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lr1te5cgt8"></script>
+
+
 </head>
-	<body>
-
+    <body>
 	<div id="container">
-
-		<header id="top">
-
-			<div class="container">
-
-				<div class="subcontainer subcontainer-top">
-
-					<nav id="topmenu"  style="width: 10px;"><a href="main.html"><img src="skin/home.png" alt="Back to home"/>main</a></nav>
-
-					<!--<nav id="collaboration" class="depth2 dropdown">
-						<ul class="menu">
-							<li class="menu-item">
-							<a class="menu-item-link" href="https://www.octoral.com/en" title="octoral">
-								<img id="brand" src="skin/collaboration/2octoral.png" alt="octoral" />
-							</a>
-						</li>
-							<li class="menu-item">
-							<a class="menu-item-link" href="https://sdmr.eu/" title="sdmr">
-								<img id="brand" src="skin/collaboration/1sdmr.png" alt="sdmr" />
-							</a>
-						</li>
-							<li class="menu-item">
-							<a class="menu-item-link" href="https://u-pol.com/" title="upol">
-								<img id="brand" src="skin/collaboration/3upol.png" alt="upol" />
-							</a>
-						</li>
-							<li class="menu-item">
-							<a class="menu-item-link" href="https://www.farecla.com/" title="farecla">
-								<img id="brand" src="skin/collaboration/4farecla.png" alt="farecla" />
-							</a>
-						</li>
-							<li class="menu-item">
-							<a class="menu-item-link" href="https://www.cp.com/ko" title="chicago pneumatic">
-								<img id="brand" src="skin/collaboration/5chicago pneumatic.png" alt="chicago pneumatic" />
-							</a>
-						</li>
-							<li class="menu-item">
-							<a class="menu-item-link" href="https://www.fillontechus.com/" title="fillon technologies">
-								<img id="brand" src="skin/collaboration/6fillon technologies.png" alt="fillon technologies" />
-							</a>
-						</li>
-						</ul>
-					</nav>-->
-
-				</div>
-
-				<div class="block-brandbox">
-				
-					<a href="#prev" class="nav prev">&lt;</a>
-					<a href="#next" class="nav next">&gt;</a>
-
-					<nav class="disabled">
-						<ul>
-							<li>
-								<a href="/link" class="active"> 1 </a>
-							</li>
-						</ul>
-					</nav>
-
-					<ul id="gallery_64" class="mediagroup gallery">
-						<li class="active">
-							<figure class="landscape">
-								<figcaption>main-header</figcaption>
-									<a class="image">
-										<img src="media/media/octoral-header.png" alt="" />
-									</a>
-									<div class="content"></div>
-							</figure>
-						</li>
-					</ul>
-
-				</div>
-
-			</div>
-
-		</header>
-
-		
+		<div style="height: 40px; background-color: #00b0f0;">
+			<nav id="topmenu"  style="width: 10px;">
+				<a href="main.html"><img src="skin/home.png" alt="Back to home"/>main</a>
+			</nav>	
+		</div>
+		<div>
+			<img src="media/media/octoral-header.png" alt="" />
+		</div>
 		<div id="content">
 			<div class="container">
 
@@ -308,29 +237,33 @@
 							
 								<div class="block_block-content_clearfix" style="font-family: NanumSquare;">
 							
-									<h1>위치</h1>
-									<h3 style="font-family: Nanumsquare;">찾아오시는 길 : 경기도 군포시 봉성로89, 3층(당정동)</h3>
-									<div id="map" style="width:100%;height:400px;"></div>
-									<script>
-										var mapOptions = {
-											center: new naver.maps.LatLng(37.3524, 126.9543),
-											zoom: 16
-										};
+									<h1>공지사항</h1>
+									
+									<div class="important-notice">
 
-										var map = new naver.maps.Map('map', mapOptions);
+										<table align="center" class="table table-bordered" border="1">
+											<thead>
+												<tr>
+													<th width="10%">글번호</th>
+													<th width="50%">글제목</th>
+													<th width="15%">작성자</th>
+													<th width="10%">조회수</th>
+													<th width="15%">작성일</th>
+												</tr>
+											</thead>
+											<tbody>
+											
+											</tbody>
+										</table>
+										<nav style="text-align: right; padding-bottom: 2%; padding-top: 2%;">	
+											<button onclick="newPage()">글쓰기</button>
+											<script> function newPage()  {window.open('login/login_main.html');} </script>
+										</nav>
+										
+									</div>
 
-										var marker = new naver.maps.Marker({
-										position: new naver.maps.LatLng(37.3524, 126.9543),
-										map: map
-										});
-									</script>
-									<br>
-									<nav style="text-align:center;">
-										<button class="w-btn" type="button" onclick="newPage()">카카오톡 채널문의</button>
-									</nav>
-									<script>
-										function newPage(){window.open('https://pf.kakao.com/_xlxefxkxj')}
-									</script>
+									
+									
                                 </div>
 								
 						</div>
@@ -339,7 +272,6 @@
 
 			</div>
 		</div>
-
 
 		<footer>
 			<div class="container">

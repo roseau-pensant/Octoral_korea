@@ -8,6 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="../scripts/lightbox/lightbox.css" />
 	<link rel="stylesheet" type="text/css" href="../skin/fonts/frutiger/style.css" />
 	<link rel="stylesheet" type="text/css" href="../skin/consent.css"/>
+	<link rel="stylesheet" type="text/css" href="../skin/button.css">
+	<link rel="stylesheet" type="text/css" href="../skin/modal.css">
+
 
 	<script type="text/javascript" src="../scripts/mootools/core.js"></script>
 	<script type="text/javascript" src="../scripts/google/maps.js"></script>
@@ -18,53 +21,15 @@
 </head>
 
 	<body>
-
-		<div id="container">
-
-			<header id="top">
-
-					<div class="container">
-
-						<div class="subcontainer subcontainer-top">
-
-							<nav id="topmenu"  style="width: 10px;"><a href="main.html"><img src="../skin/home.png" alt="Back to home"/>main</a></nav>
-						
-						</div>
-
-						<div class="block-brandbox">
-						
-							<a href="#prev" class="nav prev">&lt;</a>
-							<a href="#next" class="nav next">&gt;</a>
-
-							<nav class="disabled">
-								<ul>
-									<li>
-										<a href="/link" class="active"> 1 </a>
-									</li>
-								</ul>
-							</nav>
-
-							<ul id="gallery_64" class="mediagroup gallery">
-								<li class="active">
-									<figure class="landscape">
-										<figcaption>main-header</figcaption>
-											<a class="image">
-												<img src="../media/media/octoral-header.png" alt="" />
-											</a>
-											<div class="content"></div>
-									</figure>
-								</li>
-							</ul>
-
-						</div>
-
-					</div>
-
-			</header>
-
-
-
-
+	<div id="container">
+		<div style="height: 40px; background-color: #00b0f0;">
+			<nav id="topmenu"  style="width: 10px;">
+				<a href="../main.html"><img src="../skin/home.png" alt="Back to home"/>main</a>
+			</nav>	
+		</div>
+		<div>
+			<img src="../media/media/octoral-header.png" alt="" />
+		</div>
 			<div id="content">
 
 				<div class="container">
@@ -203,7 +168,41 @@
 							<div class="span58 offset2 onset2" id="ajaxcontent">
 					
 								<div class="category_description">
-									<h1 style="font-family: NanumSquare;">옥토랄 제품</h1>
+									<div>
+										<h1 style="font-family: NanumSquare;">옥토랄 제품</h1>
+										<button class="btn-notice" id="modal-btn" type="button">옥토랄 가격 인상</button>								
+									</div>
+									<div id="modal" class="dialog">
+										<div class="tb">
+											<div class="inner" style="max-width:800px;">
+												<div class="top">
+													<div class="title">옥토랄 가격 인상</div>
+													<a href="#" class="p_close">닫기</a>
+												</div>
+												<div class="ct">
+													<img src="../file/popup_priceIncrease.png" width="100%">
+												</div>
+												<a href="../notice.html" style="font-size: 15px;">자세한 내용은 공지사항으로</a>
+											</div>
+										</div>
+									</div>
+									<script>
+										const modal = document.querySelector("#modal");
+										const btn = document.querySelector("#modal-btn");
+										const close = document.querySelector(".p_close");
+
+										// 모달창 열기
+										btn.onclick = function() {
+										modal.style.display = "block";
+										}
+
+										// 모달창 닫기
+										close.onclick = function() {
+										modal.style.display = "none";
+
+										}
+									</script>
+									<br>
 									당신에게 더 많은 수익성을 제공하기 위해, 옥토랄의 제품 프로그램은 가능한 한 작고 완벽합니다. 선택된 양의 보조 제품을 사용함으로써 우리의 목표는 시스템을 최대한 단순하게 유지하는 것 입니다. 우수한 결과를 유지하면서 제품을 적게 생산한다는 것은 재고, 투자, 높은 이직률 및 용이한 적용을 의미합니다. 이러한 장점들은 당신에게 효율적이고 수익성 있는 시스템을 제공하는 것을 가능하게 합니다.
 								</div>
 								<h3 style="font-family: NanumSquare;">케이피앤씨 쇼핑몰 >>> <a href="https://www.kpnc.co.kr" target="_blank">kpnc.co.kr</a></h3>

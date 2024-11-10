@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -75,16 +74,23 @@
 										<thead class="cal-table-th">
 											<tr>
 												<th scope="col">C450</th>
-												<th scope="col">H25</th>
+												<th scope="col">
+													<select id="H_select" onchange="changeSelect()">
+														<option value="1">H23</option>
+														<option value="2">H24</option>
+														<option value="3">H25</option>
+														<option value="4">H26</option>
+													</select>
+												</th>
 												<th scope="col">배합량 (L)<br></th>
 											</tr>
 										</thead>
 										<tbody id="cal-table-tb">
 											<tr>
 												<td id="C450" scope="col"></td>
-												<td id="H25" scope="col"></td>
+												<td id="h" scope="col"></td>
 												<td>
-													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
+													<input id="change_result" type="text" value="1000" onkeypress="if(event.keyCode==13){calculator();}">
 													<span class="cal-CC">(CC)</span>
 													<input id="button_result" type="button" value="계산 (enter)" onclick="calculator()">
 												</td>
@@ -104,109 +110,4 @@
 
 	</div>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="ko">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0.5">
-		<title>배합비 계산기</title>
-		<link href="../../media/media/octoral symbol.png" rel="shortcut icon" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="../../skin/datasheets.css" />
-		<link rel="stylesheet" type="text/css" href="../../skin/octoral/style.css" />
-		<link rel="stylesheet" type="text/css" href="../../skin/calculator.css" />
-		<script defer src="calculator_clear2.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	</head>
-<body>
-    <div id="container">
-
-		<header id="top">
-
-			<div class="container">
-
-				<div class="subcontainer subcontainer-top">
-
-				</div>
-
-			</div>
-
-		</header>
-
-		<div id="content">
-
-			<div class="container">
-
-                <div class="subcontainer row">
-
-                    <h1 style="text-align: center; font-family: Nanumsquare; padding-bottom: 2px;">크리어 / 프라이머 배합계산기</h1>
-                    <br>
-					<div>
-						<div class="calculator_change">
-							<h2 class="calculator_change1"><a class="calculator_change_click" href="../clear/c150.html">크리어</a></h2>
-							<h2 class="calculator_change2"><a href="../middle/calculator_mixing1.html">프라이머</a></h2>
-						</div>
-						<hr>
-						<div class="button_club2">
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c150.html'">C150</button></div>
-							<div style="text-align:center;"><button class="w-btn2-click" type="button" onclick="location.href='c450.html'">C450</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_1.html'">C500 (TA910)</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c500_2.html'">C500 (AP871)</button></div>
-						</div>
-						<div class="button_club2">
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='c600.html'">C600</button></div>
-							<div style="text-align:center;"><button class="w-btn2-cm267-269" type="button" onclick="location.href='CM267_269.html'">무광크리어시스템 CM267/CM269</button></div>
-							<div style="text-align:center;"><button class="w-btn2" type="button" onclick="location.href='Spralac_SP4499.html'">Spralac_SP4499</button></div>
-						</div>
-						<hr>
-					</div>
-					
-                    <div class="calculator_box">
-						<br>
-						<h1>C450  SCRATCH RESISTANT RAPID REPAIR CLEAR_부피비 5:1</h1>
-
-						<ul>
-							<li>www.octoral.kr 홈페이지 TDS 를 확인하세요.</li>
-							<li>S20 페인트 엑셀레이터는 경화제 비율에 1%가 적정합니다.</li>
-							<li>신너 등 첨가제를 절대로 사용하지 마십시오.</li>
-						</ul>
-						
-                        <button id="reset" type="reset" onclick="reset()">초기화</button>
-
-							<div> 
-								<div class="cal-table">
-									<table class="calculator_table" border="1">
-										<thead class="cal-table-th">
-											<tr>
-												<th scope="col">C450</th>
-												<th scope="col">H25</th>
-												<th scope="col">배합량 (L)<br></th>
-											</tr>
-										</thead>
-										<tbody id="cal-table-tb">
-											<tr>
-												<td id="C450" scope="col"></td>
-												<td id="H25" scope="col"></td>
-												<td>
-													<input id="change_result" type="text" value="100" onkeypress="if(event.keyCode==13){calculator();}">
-													<span class="cal-CC">(CC)</span>
-													<input id="button_result" type="button" value="계산" onclick="calculator()">
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-                    </div>
-
-
-                 </div>
-		    </div>
-
-
-		
-
-	</div>
-</body>
->>>>>>> 887b5fb135e070c90c0097d0b6ed0fcffed83095
 </html>
