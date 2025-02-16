@@ -1,0 +1,16 @@
+.MSDS_devide{
+    width: 100%;
+    height: 100%;
+}
+
+.MSDS_devide .left{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.MSDS_devide .right{
+    float: right;
+    width: 50%;
+    height: 100;
+}
