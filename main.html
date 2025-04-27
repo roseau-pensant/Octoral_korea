@@ -16,14 +16,25 @@
 	<script type="text/javascript" src="scripts/lightbox/lightbox.js"></script>
 	<script type="text/javascript" src="scripts/various.js"></script>
 	<script>
+		// 화면 크기 가져오기s
+		var isMobile = window.innerWidth <= 768; // 모바일 장치인지 체크 (예: 768px 이하 화면)
+	
+		// 팝업 이미지 열기
 		window.open("file/popup_priceIncrease.png", "_blank", "width=798,height=447");
-
+	
 		window.onload = function popupDaisaywheel(){
 			var winleft = window.screenLeft;
 			var wintop = window.screenTop;
-			window.open("popupDaisywheel.html", "_blank", "width=570,height=1000,left=winleft,top=wintop")
+	
+			// 모바일 화면일 때 크기를 더 작게 설정
+			var popupWidth = isMobile ? window.innerWidth * 0.9 : 570; // 화면의 90% 크기로 설정
+			var popupHeight = isMobile ? window.innerHeight * 0.8 : 1000; // 화면의 80% 크기로 설정
+	
+			// 팝업 창 열기
+			window.open("popupDaisywheel.html", "_blank", "width=" + popupWidth + ",height=" + popupHeight + ",left=" + winleft + ",top=" + wintop);
 		}
 	</script>
+	
 </head>
 	<body>
 
@@ -327,12 +338,7 @@
 									<nav class="depth1 theme">
 										
 										<ul class="menu">
-								
-											<li class="menu-item menu-item-1">
-	
-												<a class="menu-item-link" href="notice.html">공지사항</a>
-				
-											</li>
+
 
 											<li class="menu-item menu-item-2">
 	
